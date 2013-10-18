@@ -15,5 +15,8 @@
 /log/*.log
 /tmp/*
 
+# Ignore bin folders
+/bin/*
+
 # Ignore mac files
 *.DS_Store
