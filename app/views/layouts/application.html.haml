@@ -19,7 +19,18 @@
 
 
   %body
-    .navbar.navbar-fixed-top
+    .container
+      .row
+        .span12
+          &nbsp;
+      .row
+        .span12
+          .hero-unit
+            %h1 Dogduégs
+            %p Bajada bajada bajada
+            %p
+              %a.btn.btn-primary.btn-large Ahora
+    .navbar
       .navbar-inner
         .container
           %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
@@ -32,9 +43,7 @@
               %li= link_to "Link 1", "/path1"
               %li= link_to "Link 2", "/path2"
               %li= link_to "Link 3", "/path3"
-
     .container
-
       .row
         .span9
           = bootstrap_flash
