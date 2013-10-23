@@ -3,7 +3,7 @@ jQuery(document).ready(function ($) {
 
     $(window).stellar();
 
-    var links = $('.navigation').find('li');
+    var links = $('.navigation').find('li').add("a");
     slide = $('.slide');
     button = $('.button');
     mywindow = $(window);
@@ -41,7 +41,7 @@ jQuery(document).ready(function ($) {
     links.click(function (e) {
         e.preventDefault();
         dataslide = $(this).attr('data-slide');
-        goToByScroll(dataslide);
+        if(dataslide) goToByScroll(dataslide);
     });
 
     button.click(function (e) {

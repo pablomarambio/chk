@@ -10,16 +10,16 @@
     /[if lt IE 9]
       = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"
     %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:400,700,600", :rel => "stylesheet", :type => "text/css"}/
-    = stylesheet_link_tag "application", :media => "all"
+    = stylesheet_link_tag "public", :media => "all"
   %body
     .menu
       .container.clearfix
-        #logo.grid_3
-          %img{:src => "assets/logo.png"}/
-        #nav.grid_9.omega
+        #logo.grid_2
+          %img{src: "assets/LogoChillClick.png", width: 75, height: 75}/
+        #nav.grid_10.omega
           %ul.navigation
-            %li{"data-slide" => "1"} Top Slide
-            %li{"data-slide" => "2"} Parallax Scrolling
+            %li{"data-slide" => "1"} Chill & Click
+            %li{"data-slide" => "2"} Upcoming events
             %li{"data-slide" => "3"} Grid
             %li{"data-slide" => "4"} Credits
     = yield

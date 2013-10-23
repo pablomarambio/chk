@@ -4,22 +4,28 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 	font-size: 1em;
-	color: #8a8683;
-	background-color:#ffffff;
+	color: #303030;
+}
+h1 {
+	color: #B4B2AE;
+}
+h2, h3 {
+	color: #AD234B;
 }
 img {
 	max-width: 100%;
 }
+a {
+	color: #AD234B;
+}
 a:link {
-	color: #f68f67;
+	color: #AD234B;
 	text-decoration: none;
 }
 a:hover {
-	color: #bde2df;
-	text-decoration: none;
+	text-decoration: underline;
 }
 a:visited {
-	color: #f68f67;
 	text-decoration: none;
 }
 
@@ -33,13 +39,17 @@ a:visited {
 	position:fixed;
 	top:0px;
 	width:100%; 
-	height:auto; 
-	background-color:#ffffff;
+	height:auto;
+	background-color:#F2F2F2;
+	border-bottom: solid 2px #AD234B;
 	z-index:100;
 }
 #logo {
 	text-align: center;
-	margin: 10px 0;
+	margin: 5px 0;
+}
+#logo img {
+	float:left;
 }
 #nav {
 	text-align: right;
@@ -55,13 +65,13 @@ a:visited {
 	padding:0 0 0 50px;
 }
 .navigation li:hover{
+	text-decoration: underline;
 	cursor:pointer;
-	color: #a9d3d0;
 }
 
 .navigation .active{
 	cursor:pointer;
-	color: #f68f67;
+	color: #AD234B;
 	font-weight:bold;
 }
 
@@ -89,12 +99,10 @@ a:visited {
 	font-size: 3.8em;
 	letter-spacing: -3px;
 	line-height: 0px;
-	color:#8a8683;
 	font-weight: 700;
 }
 #slide1 h2 {
 	font-size: 2em;
-	color: #8a8683;
 	line-height: 0px;
 	padding-bottom:20px;
 	font-weight: 400;
@@ -106,20 +114,18 @@ a:visited {
 /* Slide 2 */ 
 
 #slide2{
-	background-image:url('/assets/footprints.png');
-	background-color:#f68f67;
-	color:#ffffff;
+	background-image:url('/assets/bg-brokenteapot 2.png');
+	background-color:#E87162;
+	color: #AD234B;
 }
 #slide2 h1 {
 	font-size: 3.8em;
 	letter-spacing: -3px;
 	line-height: 0px;
-	color:#ffffff;
 	font-weight: 700;
 }
 #slide2 h2 {
 	font-size: 2em;
-	color: #ffffff;
 	line-height: 0px;
 	padding-bottom:20px;
 	font-weight: 400;
@@ -137,19 +143,16 @@ a:visited {
 	font-size: 3.8em;
 	letter-spacing: -3px;
 	line-height: 0px;
-	color:#8a8683;
 	font-weight: 700;
 }
 #slide3 h2 {
 	font-size: 2em;
-	color: #8a8683;
 	line-height: 0px;
 	padding-bottom:20px;
 	font-weight: 400;
 }
-#test{
+.test{
 	background-color:#bde2df;
-	color:#ffffff;
 	text-align:center;
 	font-size: 2em;
 	font-weight: 400;
@@ -161,20 +164,17 @@ a:visited {
 /* Slide 4 */
 
 #slide4{
-	background-image:url('/assets/sunglasses.png');
+	background-image:url('/assets/tweed.png');
 	background-color:#8a8683;
-	color:#ffffff;
 }
 #slide4 h1 {
 	font-size: 3.8em;
 	letter-spacing: -3px;
 	line-height: 0px;
-	color:#ffffff;
 	font-weight: 700;
 }
 #slide4 h2 {
 	font-size: 2em;
-	color: #ffffff;
 	line-height: 0px;
 	padding-bottom:20px;
 	font-weight: 400;
