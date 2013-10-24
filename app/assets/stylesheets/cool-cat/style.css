@@ -4,22 +4,22 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 	font-size: 1em;
-	color: #303030;
+	color: #3C1220;
 }
 h1 {
 	color: #B4B2AE;
 }
 h2, h3 {
-	color: #AD234B;
+	color: #8B3551;
 }
 img {
 	max-width: 100%;
 }
 a {
-	color: #AD234B;
+	color: #8B3551;
 }
 a:link {
-	color: #AD234B;
+	color: #8B3551;
 	text-decoration: none;
 }
 a:hover {
@@ -41,14 +41,14 @@ a:visited {
 	width:100%; 
 	height:auto;
 	background-color:#F2F2F2;
-	border-bottom: solid 2px #AD234B;
+	border-bottom: solid 2px #8B3551;
 	z-index:100;
 }
-#logo {
+.logo {
 	text-align: center;
 	margin: 5px 0;
 }
-#logo img {
+.logo img {
 	float:left;
 }
 #nav {
@@ -88,24 +88,39 @@ a:visited {
 	padding:140px 0;
 }
 
+.slide h1 {
+	font-size: 3.8em;
+	letter-spacing: -3px;
+	line-height: 0px;
+	font-weight: 700;
+}
+.slide h2 {
+	font-size: 2em;
+	line-height: 0px;
+	padding-bottom:20px;
+	font-weight: 400;
+}
+
+.slide p {
+	font-size: 1.2em;
+}
+
 
 
 /* Slide 1 */ 
 
 #slide1{
 	background-color:#ffffff;
+	margin-top: 40px;
+	background-image:url('/assets/bg-sofa.jpg');
 }
+
 #slide1 h1 {
-	font-size: 3.8em;
-	letter-spacing: -3px;
-	line-height: 0px;
-	font-weight: 700;
+	line-height: 1em;
 }
-#slide1 h2 {
-	font-size: 2em;
-	line-height: 0px;
-	padding-bottom:20px;
-	font-weight: 400;
+
+#decorative img {
+	margin-top: 25px;
 }
 
 
@@ -114,144 +129,143 @@ a:visited {
 /* Slide 2 */ 
 
 #slide2{
-	background-image:url('/assets/bg-brokenteapot 2.png');
-	background-color:#E87162;
-	color: #AD234B;
-}
-#slide2 h1 {
-	font-size: 3.8em;
-	letter-spacing: -3px;
-	line-height: 0px;
-	font-weight: 700;
-}
-#slide2 h2 {
-	font-size: 2em;
-	line-height: 0px;
-	padding-bottom:20px;
-	font-weight: 400;
+	background-image:url('/assets/tweed.png');
 }
 
+.event {
+	background-color: #ffffff;
+	padding: 40px 5px 5px 5px;
+	border: solid 2px #AD234B;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.padding {
+	min-height: 10px;
+	background-color: #ffffff;
+}
 
 
 
 /* Slide 3 */ 
 
 #slide3{
-	background-color:#ffffff;
-}
-#slide3 h1 {
-	font-size: 3.8em;
-	letter-spacing: -3px;
-	line-height: 0px;
-	font-weight: 700;
-}
-#slide3 h2 {
-	font-size: 2em;
-	line-height: 0px;
-	padding-bottom:20px;
-	font-weight: 400;
-}
-.test{
-	background-color:#bde2df;
-	text-align:center;
-	font-size: 2em;
-	font-weight: 400;
+	padding: 60px 0;
+	background-color: #ffffff;
 }
 
 
-
-
-/* Slide 4 */
+/* Slide 4 */ 
 
 #slide4{
+	background-image:url('/assets/bg-copas.jpg');
+}
+
+
+.faq {
+
+}
+
+.faq div {
+	width: 100%;
+}
+
+.faq img {
+	display: block;
+	width: 100px;
+	margin: 0 auto;
+}
+
+.faq h3 {
+	text-align: center;
+}
+
+
+
+/* Slide 5 */
+
+#slide5{
+	border-top: solid 2px #8B3551;
+	background-color: #ffffff;
+	padding: 30px 0;
+}
+
+
+/* Slide 6 */
+
+#slide6{
 	background-image:url('/assets/tweed.png');
-	background-color:#8a8683;
-}
-#slide4 h1 {
-	font-size: 3.8em;
-	letter-spacing: -3px;
-	line-height: 0px;
-	font-weight: 700;
-}
-#slide4 h2 {
-	font-size: 2em;
-	line-height: 0px;
-	padding-bottom:20px;
-	font-weight: 400;
+	padding: 15px 0;
 }
 
 
 
+/* Footer */
+
+.footer {
+	color: #B4B2AE;
+	font-size: 1.1em;
+	line-height: 2.5em;
+}
+
+.footer li {
+	list-style: none;
+}
+
+.footer .logo img {
+	max-height: 200px;
+}
 
 
 /* Tablet */
 @media screen and (max-width: 1024px) {
 
-#logo {
-	width: 100%;
-	text-align: center;
-}
+	.logo {
+		width: 100%;
+		text-align: center;
+	}
 
-#nav {
-	width:100%;
-	text-align:center;
-	margin:10px 0;
-}
+	#nav {
+		width:100%;
+		text-align:center;
+		margin:10px 0;
+	}
 
-.navigation{
-	width: 100%;
-	float: center;
-	list-style: none;
-	margin: 0;
-	padding:0;
-}
+	.navigation{
+		width: 100%;
+		float: center;
+		list-style: none;
+		margin: 0;
+		padding:0;
+	}
 
-.navigation li{
-	float: left;
-	width:25%;
-	padding:0;
-}
+	.navigation li{
+		float: left;
+		width:25%;
+		padding:0;
+	}
 
-.slide{
-	background-attachment: fixed;
-	width:100%;
-	position: relative;
-	padding:150px 0;
-}
+	.slide{
+		background-attachment: fixed;
+		width:100%;
+		position: relative;
+		padding:150px 0;
+	}
 
-#decorative {
-	display:none;
-}
+	#decorative {
+		display:none;
+	}
 
-#content {
-	text-align:center;
-	width:100%;
-}
+	#content {
+		text-align:center;
+		width:100%;
+	}
 
-#slide1 h1 {
-	line-height: 1em;
-}
-#slide1 h2 {
-	line-height: 1em;
-}
-#slide2 h1 {
-	line-height: 1em;
-}
-#slide2 h2 {
-	line-height: 1em;
-}
-#slide3 h1 {
-	line-height: 1em;
-}
-#slide3 h2 {
-	line-height: 1em;
-}
-#slide4 h1 {
-	line-height: 1em;
-}
-#slide4 h2 {
-	line-height: 1em;
-}
+	.slide h1,
+	.slide h2 {
+		line-height: 1em;
+	}
 
 }
 
@@ -261,61 +275,40 @@ a:visited {
 /* Mobile */
 @media screen and (max-width: 480px) {
 
-#logo {
-	width: 100%;
-	text-align: center;
-}
+	#logo {
+		width: 100%;
+		text-align: center;
+	}
 
-#nav {
-	width:100%;
-	margin:5px 0;
-}
+	#nav {
+		width:100%;
+		margin:5px 0;
+	}
 
-.navigation{
-	width: 100%;
-	float: left;
-	list-style: none;
-	margin: 0;
-	padding:0;
-}
+	.navigation{
+		width: 100%;
+		float: left;
+		list-style: none;
+		margin: 0;
+		padding:0;
+	}
 
-.navigation li{
-	float: left;
-	width:25%;
-}
+	.navigation li{
+		float: left;
+		width:25%;
+	}
 
-.slide{
-	background-attachment: fixed;
-	width:100%;
-	position: relative;
-	padding:150px 0;
-}
+	.slide{
+		background-attachment: fixed;
+		width:100%;
+		position: relative;
+		padding:150px 0;
+	}
 
-
-#slide1 h1 {
-	line-height: 1em;
-}
-#slide1 h2 {
-	line-height: 1em;
-}
-#slide2 h1 {
-	line-height: 1em;
-}
-#slide2 h2 {
-	line-height: 1em;
-}
-#slide3 h1 {
-	line-height: 1em;
-}
-#slide3 h2 {
-	line-height: 1em;
-}
-#slide4 h1 {
-	line-height: 1em;
-}
-#slide4 h2 {
-	line-height: 1em;
-}
+	.slide h1,
+	.slide h2 {
+		line-height: 1em;
+	}
 
 
 }

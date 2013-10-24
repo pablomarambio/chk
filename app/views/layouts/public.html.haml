@@ -14,13 +14,13 @@
   %body
     .menu
       .container.clearfix
-        #logo.grid_2
-          %img{src: "assets/LogoChillClick.png", width: 75, height: 75}/
-        #nav.grid_10.omega
+        .logo.grid_3
+          %img{src: "assets/logo-2-1.png", height: 75}/
+        #nav.grid_9.omega
           %ul.navigation
             %li{"data-slide" => "1"} Chill & Click
             %li{"data-slide" => "2"} Upcoming events
-            %li{"data-slide" => "3"} Grid
-            %li{"data-slide" => "4"} Credits
+            %li{"data-slide" => "4"} How does it work?
+            %li{"data-slide" => "5"} The team
     = yield
     = javascript_include_tag "public"

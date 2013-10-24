@@ -1,60 +1,83 @@
 #slide1.slide{"data-slide" => "1", "data-stellar-background-ratio" => "0.5"}
   .container.clearfix
-    .content.grid_7
-      %h1 Chill & Click
-      %h2 Too exclusive to tell
-      %p
-        Chill out, know people like you, meet someone special
+    .content.grid_8
+      %h1 Relax, get to know people like you and meet someone special
       %p
         %a{ :href => "#", "data-slide" => "2" }
           %img{src: "assets/bn-upcoming events 3.png"}
-    #decorative.grid_5.omega
+    #decorative.grid_4.omega
       %img{:src => "assets/LogoChillClick.png", width: 300, height: 300}/
-#slide2.slide{"data-slide" => "2", "data-stellar-background-ratio" => "0.5"}
+#slide2.slide
   .container.clearfix
     .content.grid_12
       %h1 Upcoming Events
-      
-#slide3.slide{"data-slide" => "3", "data-stellar-background-ratio" => "0.5"}
+      .event.grid_9
+        %h2 Party at Micky D's
+        %p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five.
+      .padding.grid_2.omega
+#slide3.slide{"data-slide" => "3", "data-stellar-background-ratio" => "0.8"}
   .container.clearfix
-    .content.grid_12
-      %h1 Grid
-      %h2 See how the grid changes when you resize your screen
-    .test.grid_1 1
-    .test.grid_11.omega 11
-    .test.grid_2 2
-    .test.grid_10.omega 10
-    .test.grid_3 3
-    .test.grid_9.omega 9
-    .test.grid_4 4
-    .test.grid_8.omega 8
-    .test.grid_5 5
-    .test.grid_7.omega 7
-    .test.grid_6 6
-    .test.grid_6.omega 6
-    .test.grid_7 7
-    .test.grid_5.omega 5
-    .test.grid_8 8
-    .test.grid_4.omega 4
-    .test.grid_9 9
-    .test.grid_3.omega 3
-    .test.grid_10 10
-    .test.grid_2.omega 2
-    .test.grid_11 11
-    .test.grid_1.omega 1
-    .test.grid_12 12
-#slide4.slide{"data-slide" => "4", "data-stellar-background-ratio" => "0.5"}
-  .container.clearfix
-    .content.grid_12
-      %h1.hi Credits
-      %h2.hi
-        %a{:href => "http://jalxob.com/cool-kitten", :target => "_blank"} Cool Kitten
-        was made by
-        = succeed "." do
-          %a{:href => "http://www.jalxob.com", :target => "_blank"} Jalxob
-      %p Don't forget to follow me!
+    .grid_12
+      %h1 The experience
+      %h2 You can relax the moment you arrive at the venue.  
       %p
-        %a{:href => "https://twitter.com/Jalxob", :target => "_blank"}
-          %img{:src => "assets/twitter.png"}/
-        %a{:href => "http://dribbble.com/jalxob", :target => "_blank"}
-          %img{:src => "assets/dribbble.png"}/
+        This is not express dating.
+#slide4.slide{"data-slide" => "4"}
+  .container.clearfix
+    .grid_12
+      %h1 How does it work?
+    .grid_4.faq
+      %p
+        %img{src: "assets/faq.png"}
+      %p
+        %h3 Who attends the events?
+      %p
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five.
+    .grid_4.faq
+      %p
+        %img{src: "assets/faq.png"}
+      %p
+        %h3 How much does it cost?
+      %p
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five.
+    .grid_4.faq.omega
+      %p
+        %img{src: "assets/faq.png"}
+      %p
+        %h3 Will I find the one?
+      %p
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five.
+#slide5.slide{"data-slide" => "5", "data-stellar-background-ratio" => "0.5"}
+  .container.footer.clearfix
+    .grid_12.omega
+      %h1 The team
+    .grid_12.omega
+      %h2 Bogotá office
+    .grid_6
+      %strong Left to right
+      %p Polo, CEO; Cata, Designer; Asasasdsd, VP sales
+    .grid_6.omega
+      %img{ src: "assets/team.jpg" }/
+    .grid_12.omega
+      %h2 Santiago office
+    .grid_6
+      %strong Left to right
+      %p Polo, CEO; Cata, Designer; Asasasdsd, VP sales
+    .grid_6.omega
+      %img{ src: "assets/team.jpg" }/
+#slide6.slide{"data-slide" => "6", "data-stellar-background-ratio" => "0.5"}
+  .container.footer.clearfix
+    .grid_4
+      %ul
+        %li About us
+        %li Santiago office
+        %li Bogotá office
+        %li Work with us
+    .grid_4
+      %ul
+        %li FAQ
+        %li Pricing
+        %li Terms & Conditions
+        %li Become a partner
+    .logo.grid_4.omega
+      %img{src: "assets/logo-1-1.png"}/
