@@ -224,6 +224,25 @@ a:visited {
 	padding: 30px 0;
 }
 
+.member img {
+	border-radius: 50%;
+}
+
+.member h3 {
+	margin-top: 0;
+	text-align: center;
+	color: #3C1220;
+}
+
+.member p {
+	margin: 0;
+	text-align: center;
+}
+
+.margin-top {
+	margin-top: 3em;
+}
+
 
 /* Slide 6 */
 
