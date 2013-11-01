@@ -27,6 +27,9 @@ describe Event do
       it "should have a duration" do
         Event.new.respond_to?(:when).must_equal true
       end
+      it "should have a price" do
+        Event.new.respond_to?(:price).must_equal true
+      end
     end
     it "should allow saving" do
       new_event = Event.new.tap do |e|
@@ -37,6 +40,7 @@ describe Event do
         e.city = "Santiago"
         e.country = "Chile"
         e.picture = "Diana Bolocco.jpg"
+        e.price = 9.95
         e.duration = 120 # in minutes
       end
       new_event.save!

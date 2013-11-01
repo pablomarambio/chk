@@ -9,20 +9,16 @@
   .container.clearfix
     .content.grid_12.omega
       %h1 Upcoming Events
-    .event.grid_12.omega
-      %h2 Party at Micky D's
-      %h3 11-24-2013 / 20:30 / West End / Bogotá
-      %p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five.
-      .bottomline
-        %span USD 80
-        %img{src: "assets/apply with linkedin.png"}
-    .event.grid_12.omega
-      %h2 Best Party. Ever.
-      %h3 11-31-2013 / 19:00 / Bus Transmilenio / Bogotá
-      %p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five.
-      .bottomline
-        %span USD 105
-        %img{src: "assets/apply with linkedin.png"}
+    - Event.upcoming_for("Santiago").each do |e|
+      .event.grid_12.omega
+        %h2= e.name
+        %h3
+          #{e.when.strftime "%Y/%m/%d"} / #{e.when.strftime "%H:%M"} / #{e.address} / #{e.city}
+        %p= e.description
+        .bottomline
+          %span
+            USD #{number_to_currency e.price, precision: 2}
+          %img{src: "assets/apply with linkedin.png"}
 #slide3.slide{"data-slide" => "3", "data-stellar-background-ratio" => "0.8"}
   .container.clearfix
     .grid_12
