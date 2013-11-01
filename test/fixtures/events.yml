@@ -1,7 +1,7 @@
 # Read about fixtures at
 # http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
+past:
   when: 2013-10-18 14:13:51
   duration: 1
   address: MyString
@@ -11,8 +11,18 @@ one:
   description: MyText
   picture: MyString
 
-two:
-  when: 2013-10-18 14:13:51
+future1:
+  when: 2014-10-18 14:13:51
+  duration: 1
+  address: MyString
+  city: MyString
+  country: MyString
+  name: MyString
+  description: MyText
+  picture: MyString
+
+future2:
+  when: 2014-10-18 14:13:51
   duration: 1
   address: MyString
   city: MyString

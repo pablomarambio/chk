@@ -42,4 +42,17 @@ describe Event do
       new_event.save!
     end
   end
+  describe "searching" do
+    describe "upcoming events" do
+      before do
+        @events = Event.upcoming_for("Santiago")
+      end
+      it "should only display events in the future" do
+        @events.each { |e| e.when.must_be :>, Time.now.beginning_of_day }
+      end
+      it "should only display events for the current city" do
+        @events.each { |e| e.city.must_equal "Santiago" }
+      end
+    end
+  end
 end
