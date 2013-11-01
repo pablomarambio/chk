@@ -18,7 +18,7 @@
         .bottomline
           %span
             USD #{number_to_currency e.price, precision: 2}
-          %img{src: "assets/apply with linkedin.png"}
+          = link_to "", apply_event_path(e)
 #slide3.slide{"data-slide" => "3", "data-stellar-background-ratio" => "0.8"}
   .container.clearfix
     .grid_12
