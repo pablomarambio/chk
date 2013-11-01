@@ -5,7 +5,7 @@ past:
   when: 2013-10-18 14:13:51
   duration: 1
   address: MyString
-  city: MyString
+  city: Santiago
   country: MyString
   name: MyString
   description: MyText
@@ -15,7 +15,7 @@ future1:
   when: 2014-10-18 14:13:51
   duration: 1
   address: MyString
-  city: MyString
+  city: Santiago
   country: MyString
   name: MyString
   description: MyText
@@ -25,7 +25,7 @@ future2:
   when: 2014-10-18 14:13:51
   duration: 1
   address: MyString
-  city: MyString
+  city: Santiago
   country: MyString
   name: MyString
   description: MyText

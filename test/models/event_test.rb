@@ -46,6 +46,7 @@ describe Event do
     describe "upcoming events" do
       before do
         @events = Event.upcoming_for("Santiago")
+        @events.wont_be_empty
       end
       it "should only display events in the future" do
         @events.each { |e| e.when.must_be :>, Time.now.beginning_of_day }
