@@ -17,7 +17,7 @@ future1:
   address: MyString
   city: Santiago
   country: MyString
-  name: MyString
+  name: Über Event 1
   description: MyText
   picture: MyString
 
@@ -27,6 +27,6 @@ future2:
   address: MyString
   city: Santiago
   country: MyString
-  name: MyString
+  name: Super Event 1
   description: MyText
   picture: MyString

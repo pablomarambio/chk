@@ -1,7 +1,10 @@
 require "test_helper"
 
 describe HomeController do
-  # it "must be a real test" do
-  #   flunk "Need real tests"
-  # end
+  describe "index" do
+    it "should display the upcoming events" do
+      get :index
+      response.body.must_match /Über/
+    end
+  end
 end
