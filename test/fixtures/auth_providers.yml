@@ -1,0 +1,26 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  ap_name: MyString
+  ap_uid: MyString
+  ap_oa_token: MyString
+  ap_oa_secret: MyString
+  ap_upicture: MyText
+  ap_uprofile: MyText
+  ap_uemail: MyString
+  ap_uname: MyString
+  raw: MyText
+
+two:
+  user_id: 1
+  ap_name: MyString
+  ap_uid: MyString
+  ap_oa_token: MyString
+  ap_oa_secret: MyString
+  ap_upicture: MyText
+  ap_uprofile: MyText
+  ap_uemail: MyString
+  ap_uname: MyString
+  raw: MyText

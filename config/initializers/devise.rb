@@ -4,7 +4,7 @@ Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
-  config.secret_key = 'ce63980313dbb77d074c8f7ff125013d7d62478cc7038121597f42f791a76553fec932318d1eca333a31fa68d077fb9de8260c3be558a6abc76c496522de82a5'
+  config.secret_key = '59204bb2209b207622d1622e5f84349ac1d68590706f7fc39c793d6731db461351b17c301f63af9746fe8f66a41c316f59e329eecee8042c793ed085adefcdbd'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -98,7 +98,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = '63cf2bebb5ae4ae25fa211349be5aba7f2f58bfb1d1e714e4bd34372a2151929c8129b50b13164f870c5c377887fdc7edf9692cb809538689786503be8dbfeae'
+  # config.pepper = 'f52667dca2fff0bff0d49b111d9b010c30f783fc1d22d213e0477470985743a0e6e09b09cb019bdb5529de79df0feb0eff2389d29c7e094c48b3cfc9e477a4a0'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -120,7 +120,7 @@ Devise.setup do |config|
   # initial account confirmation) to be applied. Requires additional unconfirmed_email
   # db field (see migrations). Until confirmed new email is stored in
   # unconfirmed email column, and copied to email column on successful confirmation.
-  config.reconfirmable = true
+  config.reconfirmable = false
 
   # Defines which key will be used when confirming an account
   # config.confirmation_keys = [ :email ]
@@ -138,7 +138,7 @@ Devise.setup do |config|
 
   # ==> Configuration for :validatable
   # Range for password length. Default is 8..128.
-  config.password_length = 8..128
+  # config.password_length = 8..128
 
   # Email regex used to validate email formats. It simply asserts that
   # one (and only one) @ exists in the given string. This is mainly
@@ -184,7 +184,7 @@ Devise.setup do |config|
   # Time interval you can reset your password with a reset password key.
   # Don't put a too small interval or your users won't have the time to
   # change their passwords.
-  config.reset_password_within = 6.hours
+  # config.reset_password_within = 6.hours
 
   # ==> Configuration for :encryptable
   # Allow you to use another encryption algorithm besides bcrypt (default). You can use

@@ -5,6 +5,8 @@ class EventsController < ApplicationController
 
   def apply
     id = params[:event_id]
+    session[:applying_to] = id
+    redirect_to "/auth/linkedin"
   end
 
   private
