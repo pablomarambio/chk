@@ -5,6 +5,8 @@
 #   gem 'sqlite3'
 development:
   adapter: postgresql
+  user: postgres
+  password: wilson
   host: localhost
   database: chillclick
   pool: 5
@@ -16,6 +18,8 @@ development:
 test:
   adapter: postgresql
   host: localhost
+  user: postgres
+  password: wilson
   database: chillclick_test
   pool: 5
   timeout: 5000
@@ -23,6 +27,8 @@ test:
 
 production:
   adapter: postgresql
+  user: postgres
+  password: wilson
   host: localhost
   database: chillclick
   pool: 5
