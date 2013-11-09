@@ -158,8 +158,10 @@ a:visited {
 	vertical-align: middle;
 	width: 181px;
 	display:inline-block;
+	background-repeat: no-repeat;
 	background-size: 181px 32px;
-	background: transparent url('/assets/apply with linkedin.png') left top no-repeat;
+	background-position: left top;
+	background-image: url('/assets/apply with linkedin.png');
 }
 
 
