@@ -35,6 +35,10 @@ class SessionsController < ApplicationController
 					sign_in user
 			end
 		end
+		if session[:applying_to]
+			Event.find(session[:applying_to]).apply(current_user)
+			session[:applying_to] = nil
+		end
 		redirect_to root_path
 	end
 

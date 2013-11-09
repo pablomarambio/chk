@@ -75,8 +75,10 @@ a:visited {
 	font-weight:bold;
 }
 
-
-
+h1.event-name {
+	font-size: 3em;
+	margin: 0.3em 0 0 3em;
+}
 
 /* General Slides */ 
 
@@ -109,13 +111,13 @@ a:visited {
 
 /* Slide 1 */ 
 
-#slide1{
+#slide-home{
 	margin-top: 40px;
 	background-image:url('/assets/bg-sofa.jpg');
 	padding: 200px 0;
 }
 
-#slide1 h1 {
+#slide-home h1 {
 	line-height: 1em;
 }
 
@@ -162,6 +164,22 @@ a:visited {
 	background-size: 181px 32px;
 	background-position: left top;
 	background-image: url('/assets/apply with linkedin.png');
+}
+
+#slide-event {
+	margin-top: 40px;
+	background-image:url('http://theuptownsocial.com/wp-content/uploads/2012/03/wine-bottles-web.jpg');
+	padding: 200px 0;
+	font-size: 1.3em;
+	color: #B4B2AE;
+}
+
+#slide-event img {
+	margin-top: 40px;
+}
+
+.shadow {
+	text-shadow: 2px 2px 2px black;
 }
 
 
@@ -250,9 +268,9 @@ a:visited {
 }
 
 
-/* Slide 6 */
+/* Slide: footer */
 
-#slide6{
+#slide-footer{
 	background-image:url('/assets/tweed.png');
 	padding: 15px 0;
 }

@@ -4,9 +4,10 @@ class EventsController < ApplicationController
   before_filter :load_event
 
   def apply
+    redirect_to "/auth/linkedin" and return if session[:applying_to]
     id = params[:event_id]
     session[:applying_to] = id
-    redirect_to "/auth/linkedin"
+    render "show", layout: false
   end
 
   private

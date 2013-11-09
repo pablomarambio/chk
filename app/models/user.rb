@@ -3,7 +3,8 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :registerable, :recoverable, :rememberable, :trackable
 
-  has_many :auth_providers, :dependent => :destroy
+  has_many :auth_providers, dependent: :destroy
+  has_many :petitions, dependent: :destroy
 
   def add_auth_provider(h)
     raise "Invalid auth hash" unless h

@@ -1,4 +1,4 @@
-#slide1.slide{"data-slide" => "1", "data-stellar-background-ratio" => "0.5"}
+#slide-home.slide{"data-slide" => "1", "data-stellar-background-ratio" => "0.5"}
   .container.clearfix
     .content.grid_8
       %h1 Relax, get to know people like you and meet someone special
@@ -18,7 +18,10 @@
         .bottomline
           %span
             USD #{number_to_currency e.price, precision: 2}
-          = link_to "", apply_event_path(e)
+          - if user_signed_in? && e.users.include?(current_user)
+            You already applied!
+          - else
+            = link_to "", apply_event_path(e)
 #slide3.slide{"data-slide" => "3", "data-stellar-background-ratio" => "0.8"}
   .container.clearfix
     .grid_12
@@ -100,7 +103,7 @@
       %h3 Pamela
       %p same here
 
-#slide6.slide{"data-slide" => "6", "data-stellar-background-ratio" => "0.5"}
+#slide-footer.slide{"data-slide" => "6", "data-stellar-background-ratio" => "0.5"}
   .container.footer.clearfix
     .grid_4
       %ul
