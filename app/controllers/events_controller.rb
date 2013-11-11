@@ -1,13 +1,17 @@
 class EventsController < ApplicationController
   rescue_from Application::EventNotFoundError, with: :event_not_found
   rescue_from Application::EventExpiredError, with: :event_expired
-  before_filter :load_event
+  before_filter :load_event, only: [:apply]
+
+  def index
+    @events = Event.all
+  end
 
   def apply
     redirect_to "/auth/linkedin" and return if session[:applying_to]
     id = params[:event_id]
     session[:applying_to] = id
-    render "show", layout: false
+    render "public_show", layout: false
   end
 
   private

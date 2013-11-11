@@ -1,43 +1,45 @@
-!!! 5
-%html(lang="en")
-  %head
-    %meta(charset="utf-8")
-    %meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
-    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    %title= content_for?(:title) ? yield(:title) : "Chk"
-    = csrf_meta_tags
-    / Le HTML5 shim, for IE6-8 support of HTML elements
-    /[if lt IE 9]
-      = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"
-    %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:400,700,600", :rel => "stylesheet", :type => "text/css"}/
-    = stylesheet_link_tag "public", :media => "all"
-  %body
-    .menu
-      .container.clearfix
-        .logo.grid_3
-          =image_tag "logo-2-1.png"
-        .grid_9
-          %h1.event-name.shadow= @event.name
-    #slide-event.shadow.slide{"data-stellar-background-ratio" => "0.5"}
-      .container.clearfix
-        .grid_7
-          %p= @event.description
-        .grid_5.omega
-          =image_tag @event.picture
-    #slide-footer.slide{"data-stellar-background-ratio" => "0.5"}
-      .container.footer.clearfix
-        .grid_4
-          %ul
-            %li About us
-            %li Santiago office
-            %li Bogotá office
-            %li Work with us
-        .grid_4
-          %ul
-            %li FAQ
-            %li Pricing
-            %li Terms & Conditions
-            %li Become a partner
-        .logo.grid_4.omega
-          =image_tag "logo-1-1.png"
-    = javascript_include_tag "public"
+- model_class = Event
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.titleize
+
+%p
+  %strong= model_class.human_attribute_name(:when) + ':'
+  %br
+  = @event.when
+%p
+  %strong= model_class.human_attribute_name(:duration) + ':'
+  %br
+  = @event.duration
+%p
+  %strong= model_class.human_attribute_name(:address) + ':'
+  %br
+  = @event.address
+%p
+  %strong= model_class.human_attribute_name(:city) + ':'
+  %br
+  = @event.city
+%p
+  %strong= model_class.human_attribute_name(:country) + ':'
+  %br
+  = @event.country
+%p
+  %strong= model_class.human_attribute_name(:name) + ':'
+  %br
+  = @event.name
+%p
+  %strong= model_class.human_attribute_name(:description) + ':'
+  %br
+  = @event.description
+%p
+  %strong= model_class.human_attribute_name(:picture) + ':'
+  %br
+  = @event.picture
+%p
+  %strong= model_class.human_attribute_name(:price) + ':'
+  %br
+  = @event.price
+
+.form-actions
+  = link_to t('.back', :default => t("helpers.links.back")), events_path, :class => 'btn'
+  = link_to t('.edit', :default => t("helpers.links.edit")), edit_event_path(@event), :class => 'btn'
+  = link_to t('.destroy', :default => t("helpers.links.destroy")), event_path(@event), :method => "delete", :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger'
