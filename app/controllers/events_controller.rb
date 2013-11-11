@@ -9,9 +9,8 @@ class EventsController < ApplicationController
 
   def apply
     redirect_to "/auth/linkedin" and return if session[:applying_to]
-    id = params[:event_id]
-    session[:applying_to] = id
-    render "public_show", layout: false
+    session[:applying_to] = @event.id
+    render "public_show", layout: "public"
   end
 
   private

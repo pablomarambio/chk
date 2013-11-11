@@ -15,12 +15,7 @@
     .menu
       .container.clearfix
         .logo.grid_3
-          %img{src: "assets/logo-2-1.png", height: 75}/
-        #nav.grid_9.omega
-          %ul.navigation
-            %li{"data-slide" => "1"} Chill & Click
-            %li{"data-slide" => "2"} Upcoming events
-            %li{"data-slide" => "4"} How does it work?
-            %li{"data-slide" => "5"} The team
+          = link_to image_tag("logo-2-1.png", height: 75), root_path
+        = yield(:header)
     = yield
     = javascript_include_tag "public"
