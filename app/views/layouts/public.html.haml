@@ -14,8 +14,9 @@
   %body
     .menu
       .container.clearfix
-        .logo.grid_3
-          = link_to image_tag("logo-2-1.png", height: 75), root_path
-        = yield(:header)
+        .home-logo-container
+          = link_to "", root_path, id: "home-logo"
+        .menu-container
+          = yield(:header)
     = yield
     = javascript_include_tag "public"
