@@ -1,13 +1,30 @@
 - content_for(:header) do
-  .grid_9.omega
-    %h1.event-name.shadow= @event.name
+  %h1.event-name.shadow= @event.name
 
 #slide-event.shadow.slide{"data-stellar-background-ratio" => "0.5"}
   .container.clearfix
+    = render "shared/flash"
+    .grid_12
+      %h1
+        #{@event.name}
     .grid_7
+      %h2
+        #{@event.when.strftime "%Y-%m-%d"} / #{@event.when.strftime "%H:%M"}
+      %h2 
+        #{@event.address}
+      %h2
+        #{@event.city}
+    .grid_5.omega
+      %ul.demo-tags
+        %li
+          %a{href: "#"}= number_to_currency @event.price, precision: 2
+    .grid_7
+      = render "shared/event_application", alert_application: false
       %p= @event.description
     .grid_5.omega
       =image_tag @event.picture
+    .grid_12
+      = render "shared/event_application", alert_application: true
 #slide-footer.slide{"data-stellar-background-ratio" => "0.5"}
   .container.footer.clearfix
     .grid_4
@@ -24,4 +41,8 @@
         %li Become a partner
     .logo.grid_4.omega
       =image_tag "logo-1-1.png"
+
 = javascript_include_tag "public"
+- content_for :script do
+  :plain
+    //hi!

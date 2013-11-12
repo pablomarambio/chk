@@ -30,6 +30,26 @@ a:visited {
 }
 
 
+/* Flashes */
+
+.flash div {
+	width: 90%;
+	width: calc(100% - 1.5em);
+	padding: 0.5em;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: solid 2px #f2f2f2;
+	margin-bottom: 2em;
+}
+
+.flash div.error {
+	background-color: #8B3551;
+}
+
+.flash div.notice {
+	background-color: #B4CEB6;
+}
 
 
 
@@ -66,6 +86,14 @@ a:visited {
 	height: 75px;
 }
 
+.menu .menu-container h1.event-name {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	text-align: right;
+	font-size: 3em;
+}
+
 #nav {
 	text-align: right;
 	margin: 30px 0 0 0;
@@ -91,11 +119,6 @@ a:visited {
 	cursor:pointer;
 	color: #AD234B;
 	font-weight:bold;
-}
-
-h1.event-name {
-	font-size: 3em;
-	margin: 0.3em 0 0 3em;
 }
 
 /* General Slides */ 
@@ -132,7 +155,7 @@ h1.event-name {
 #slide-home{
 	margin-top: 40px;
 	background-image:url('/assets/bg-sofa.jpg');
-	padding: 200px 0;
+	padding: 150px 0;
 }
 
 #slide-home h1 {
@@ -173,8 +196,8 @@ h1.event-name {
 	vertical-align: middle;
 }
 
-.event .bottomline a {
-	height: 100%;
+a.apply_with_linkedin {
+	height: 32px;
 	vertical-align: middle;
 	width: 181px;
 	display:inline-block;
@@ -184,16 +207,90 @@ h1.event-name {
 	background-image: url('/assets/apply with linkedin.png');
 }
 
+.bottomline a.apply_with_linkedin {
+	display:inline-block;
+}
+
+/* Public show */
+
 #slide-event {
 	margin-top: 40px;
 	background-image:url('http://theuptownsocial.com/wp-content/uploads/2012/03/wine-bottles-web.jpg');
-	padding: 200px 0;
-	font-size: 1.3em;
+	padding: 150px 0 200px 0;
 	color: #B4B2AE;
 }
 
 #slide-event img {
-	margin-top: 40px;
+}
+
+#slide-event h1 {
+	margin: 0 0 0.8em 0;
+}
+
+#slide-event h2 {
+	line-height: 0.7em;
+}
+
+.demo-tags {
+  margin: 1em 0;
+  padding: 0;
+  list-style-type: none;
+  display: inline-block;
+}
+
+.demo-tags li {
+  float: left;
+  height: 90px;
+  line-height: 90px;
+  position: relative;
+  margin: 0 1em 0.6em 0;
+}
+
+.demo-tags a {
+  background: #B4B2AE;
+  color: #fff;
+  font-size: 40px;
+  text-decoration: none;
+  -webkit-border-top-left-radius: 9px;
+  -webkit-border-bottom-left-radius: 9px;
+  -moz-border-radius-topleft: 9px;
+  -moz-border-radius-bottomleft: 9px;
+  border-top-left-radius: 9px;
+  border-bottom-left-radius: 9px;
+  padding: 18px 20px;
+}
+
+.demo-tags a:after {
+  content: "";
+  float: right;
+  width: 0;
+  height: 0;
+  border-top: 45px solid transparent;
+  border-left: 45px solid #B4B2AE;
+  border-bottom: 45px solid transparent;
+}
+
+.demo-tags a:before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  width: 8px;
+  height: 8px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background: #F2F2F2;
+  -moz-box-shadow: -1px -1px 1px #424444;
+  -webkit-box-shadow: -1px -1px 1px #424444;
+  box-shadow: -1px -1px 1px #424444;
+}
+
+.demo-tags a:hover {
+  background: #ff4500;
+}
+.demo-tags a:hover:after {
+  border-color: transparent transparent transparent #ff4500;
 }
 
 .shadow {
@@ -317,6 +414,7 @@ h1.event-name {
 
 	.container {
 		width: 100%;
+		width: calc(100% - 10px);
 	}
 
 	.navigation {
@@ -330,6 +428,11 @@ h1.event-name {
 
 	.navigation li.dont-show-mobile {
 		display: none;
+	}
+
+	.menu .menu-container h1.event-name {
+		font-size: 2em;
+		margin-top: 0.5em;
 	}
 
 	.slide{
@@ -391,6 +494,11 @@ h1.event-name {
 
 	div.home-logo-container {
 		width: 60px;
+	}
+
+	.menu .menu-container h1.event-name {
+		font-size: 1.5em;
+		margin-top: 0.75em;
 	}
 
 	.slide{

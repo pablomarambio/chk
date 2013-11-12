@@ -1,0 +1,41 @@
+- content_for(:header) do
+  %h1.event-name.shadow= @event.name
+
+#slide-event.shadow.slide{"data-stellar-background-ratio" => "0.5"}
+  .container.clearfix
+    .grid_7
+      %p To apply, you must log-in with LinkedIn. We will save your LinkedIn profile locally for the purposes of the event application process. You will have complete control over my LinkedIn information at all times.
+      = link_to "APPLY NOW", apply_event_path(@event)
+      %p Your activity on Chill & Click will remain completely exclusive of any activity on LinkedIn.
+      %p 
+        We guarantee that 
+        %strong none of your activities will ever be shared
+        back to your LinkedIn account.
+      %p You can set profile visibility filters so that only preferred set of users on Chill & Click will be able to see or search for your profile.
+      %p Rest assured you will have complete control over your account at all times and can browse the site without any privacy/security concerns.
+      %p 
+        Go back to the
+        = link_to "event page", public_show_event_path(@event)
+    .grid_5.omega
+      = image_tag @event.picture
+#slide-footer.slide{"data-stellar-background-ratio" => "0.5"}
+  .container.footer.clearfix
+    .grid_4
+      %ul
+        %li About us
+        %li Santiago office
+        %li Bogotá office
+        %li Work with us
+    .grid_4
+      %ul
+        %li FAQ
+        %li Pricing
+        %li Terms & Conditions
+        %li Become a partner
+    .logo.grid_4.omega
+      =image_tag "logo-1-1.png"
+
+= javascript_include_tag "public"
+- content_for :script do
+  :plain
+    //hi!

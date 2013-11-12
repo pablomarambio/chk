@@ -20,3 +20,7 @@
           = yield(:header)
     = yield
     = javascript_include_tag "public"
+    :javascript
+      $(function(){
+        #{yield(:script)}
+      });

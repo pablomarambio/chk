@@ -9,6 +9,7 @@ class Event < ActiveRecord::Base
   end
 
   def apply user
+    raise Application::AlreadyAppliedError if self.petitions.where(user_id: user.id).any?
     self.petitions.create(
       user_id: user.id,
       status: "requested"

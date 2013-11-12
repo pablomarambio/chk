@@ -19,7 +19,8 @@
       %h1 Upcoming Events
     - Event.upcoming_for("Santiago").each do |e|
       .event.grid_12.omega
-        %h2= e.name
+        %h2
+          = link_to e.name, public_show_event_path(e) 
         %h3
           #{e.when.strftime "%Y/%m/%d"} / #{e.when.strftime "%H:%M"} / #{e.address} / #{e.city}
         %p= e.description
@@ -29,7 +30,7 @@
           - if user_signed_in? && e.users.where(id: current_user.id).any?
             You already applied!
           - else
-            = link_to "", apply_event_path(e)
+            = link_to "", public_show_event_path(e), class: "apply_with_linkedin"
 #slide3.slide{"data-slide" => "3", "data-stellar-background-ratio" => "0.8"}
   .container.clearfix
     .grid_12

@@ -1,0 +1,5 @@
+- if user_signed_in? && @event.users.where(id: current_user.id).any?
+  - if alert_application
+    You already applied to this event. We will contact you shortly via email.
+- else
+  = link_to "", public_apply_event_path(@event), class: "apply_with_linkedin"

@@ -1,0 +1,5 @@
+- if flash.any?
+  .grid_12.flash
+    - flash.keys.each do |k|
+      %div{class: k}
+        = flash[k]

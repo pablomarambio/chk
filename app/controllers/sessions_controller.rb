@@ -16,28 +16,25 @@ class SessionsController < ApplicationController
 		if user_signed_in?
 			# if this authentication provider is not linked to the account, add it
 			if !auth
-					current_user.add_auth_provider h
-					flash[:notice] = 'Sign in via ' + provider.capitalize + ' has been added to your account.'
+				current_user.add_auth_provider h
 			else
-					flash[:notice] = provider + ' is already linked to your account.'
+				# Already added, do nothing
 			end
 		else
 			# check if user has already signed in using this authentication provider and continue with sign in process if yes
 			if auth
-					flash[:notice] = 'Welcome back, ' + auth.username
-					sign_in auth.user
+				sign_in auth.user
 			else
-					# at this point we are facing a new user... so he must be signing up
-					Rails.logger.debug "Unknown user trying to log in"
-					user = User.new
-					user.save!
-					user.add_auth_provider h
-					sign_in user
+				# at this point we are facing a new user... so he must be signing up
+				Rails.logger.debug "Unknown user trying to log in"
+				user = User.new
+				user.save!
+				user.add_auth_provider h
+				sign_in user
 			end
 		end
 		if session[:applying_to]
-			Event.find(session[:applying_to]).apply(current_user)
-			session[:applying_to] = nil
+			redirect_to apply_event_path(session[:applying_to]) and return
 		end
 		redirect_to root_path
 	end
