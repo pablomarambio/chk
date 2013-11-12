@@ -167,13 +167,12 @@ a:visited {
 /* Slide 2 */ 
 
 #slide2{
-	background-image:url('/assets/tweed.png');
+	background-image:url('/assets/bg-tweed.png');
 	padding: 30px 0;
 }
 
 .event {
 	background-color: #F2F2F2;
-	background-image:url('/assets/bg-brokenteapot 2.png');
 	padding: 40px 40px 5px 40px;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
@@ -204,11 +203,7 @@ a.apply_with_linkedin {
 	background-repeat: no-repeat;
 	background-size: 181px 32px;
 	background-position: left top;
-	background-image: url('/assets/apply with linkedin.png');
-}
-
-.bottomline a.apply_with_linkedin {
-	display:inline-block;
+	background-image: url('/assets/bn-applywithlinkedin.png');
 }
 
 /* Public show */
@@ -386,7 +381,7 @@ a.apply_with_linkedin {
 /* Slide: footer */
 
 #slide-footer{
-	background-image:url('/assets/tweed.png');
+	background-image:url('/assets/bg-tweed.png');
 	padding: 15px 0;
 }
 
