@@ -19,13 +19,12 @@ class EventsController < ApplicationController
 
   def apply
     redirect_to "/auth/linkedin" and return unless user_signed_in?
+    redirect_to public_show_event_path(session[:applying_to])
     Event.find(session[:applying_to]).apply(current_user)
-    flash[:notice] = "You have applied successfully"
+    session[:applying_to] = nil
+    flash[:notice] = "You have applied successfully. You will receive an email shortly from our team"
   rescue Application::AlreadyAppliedError
     flash[:error] = "You already applied to this event."
-  ensure
-    redirect_to public_show_event_path(session[:applying_to])
-    session[:applying_to] = nil
   end
 
   private
