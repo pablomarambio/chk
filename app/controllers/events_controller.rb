@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   rescue_from Application::EventNotFoundError, with: :event_not_found
   rescue_from Application::EventExpiredError, with: :event_expired
   before_filter :load_event, only: [:public_apply, :public_show]
-  load_and_authorize_resource only: [:index, :show, :edit, :update]
+  load_and_authorize_resource only: [:index, :show, :edit, :update, :new]
 
   def public_show
     session[:applying_to] = nil
@@ -22,8 +22,14 @@ class EventsController < ApplicationController
     end
   end
 
-  def event_params
-    params.require(:event).permit(:when, :duration, :address, :city, :country, :name, :description, :picture, :price)
+  def create
+    @event = Event.new(event_params)
+    authorize! :create, @event
+    if @event.save
+      redirect_to event_path(@event)
+    else
+      render "new"
+    end
   end
 
   def apply
@@ -37,9 +43,15 @@ class EventsController < ApplicationController
   end
 
   private
+
+  def event_params
+    params.require(:event).permit(:when, :duration, :address, :city, :country, :name, :description, :picture, :price)
+  end
+
   def event_not_found
     render text: "Evento no encontrado!", status: 404
   end
+
   def event_expired
     render text: "Evento expirado!", status: 404
   end
