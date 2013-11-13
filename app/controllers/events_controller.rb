@@ -2,10 +2,7 @@ class EventsController < ApplicationController
   rescue_from Application::EventNotFoundError, with: :event_not_found
   rescue_from Application::EventExpiredError, with: :event_expired
   before_filter :load_event, only: [:public_apply, :public_show]
-
-  def index
-    @events = Event.all
-  end
+  load_and_authorize_resource only: [:index, :show, :edit, :update]
 
   def public_show
     session[:applying_to] = nil
