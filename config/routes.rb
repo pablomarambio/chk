@@ -1,6 +1,10 @@
 Chk::Application.routes.draw do
   devise_for :users
-  
+
+  resources :users
+
+  resources :petitions
+
   resources :events do
     member do
       get :public_show

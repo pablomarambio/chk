@@ -21,8 +21,8 @@ class User < ActiveRecord::Base
       :raw => h[:raw])
     if self.auth_providers.count == 1
       # If this is this user's only auth provider, we set his username and avatar
-      self.picture = h[:ap_upicture]
-      self.email = h[:ap_uemail]
+      self.picture = h[:upicture]
+      self.email = h[:uemail]
     end
   end
 end
