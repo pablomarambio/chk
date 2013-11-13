@@ -14,6 +14,18 @@ class EventsController < ApplicationController
     render layout: "public"
   end
 
+  def update
+    if @event.update(event_params)
+      redirect_to(@event)
+    else
+      render "edit"
+    end
+  end
+
+  def event_params
+    params.require(:event).permit(:when, :duration, :address, :city, :country, :name, :description, :picture, :price)
+  end
+
   def apply
     redirect_to "/auth/linkedin" and return unless user_signed_in?
     redirect_to public_show_event_path(session[:applying_to])
