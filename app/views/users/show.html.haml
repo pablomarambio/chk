@@ -8,6 +8,31 @@
   %br
   = @user.email
 %p
+  %strong= model_class.human_attribute_name(:picture) + ':'
+  %br
+  = @user.picture
+%p
+  %strong Administrador?
+  %br
+  = @user.admin ? "Sí" : "No"
+%p
+  %strong Postulaciones
+  %table.table.table-striped
+    %thead
+      %tr
+        %th
+          %em Evento
+        %th
+          %em Estatus
+        %th
+          %em Fecha
+    %tbody
+      - @user.petitions.each do |petition|
+        %tr
+          %td= link_to petition.event.name, event_path(petition.event)
+          %td= petition.status
+          %td=l petition.created_at
+%p
   %strong= model_class.human_attribute_name(:current_sign_in_at) + ':'
   %br
   = @user.current_sign_in_at
@@ -23,14 +48,6 @@
   %strong= model_class.human_attribute_name(:last_sign_in_ip) + ':'
   %br
   = @user.last_sign_in_ip
-%p
-  %strong= model_class.human_attribute_name(:picture) + ':'
-  %br
-  = @user.picture
-%p
-  %strong Administrador?
-  %br
-  = @user.admin ? "Sí" : "No"
 
 .form-actions
   = link_to t('.back', :default => t("helpers.links.back")), users_path, :class => 'btn'
