@@ -16,6 +16,10 @@
   %br
   = @user.admin ? "Sí" : "No"
 %p
+  %strong LinkedIn
+  %br
+  = link_to @linkedin.ap_uname, @linkedin.ap_uprofile
+%p
   %strong Postulaciones
   %table.table.table-striped
     %thead
